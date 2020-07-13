@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 112.5%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:repeat (3,auto);
+    margin: 0px;
+    justify-items: center;
+}
+header {
+    grid-row: 1;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    background: limegreen;
+    margin: 0px;
+    padding: 15px;
+}
+.question-card {
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 20px;
+}
+footer {
+    grid-row: 3;
+    width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: limegreen;
+    max-height: 60px;
+    width: 100%;
+}
