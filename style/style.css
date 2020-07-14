@@ -14,12 +14,15 @@ header {
     grid-row: 1;
     width: 100%;
     background-color: salmon;
+
 }
 h1 {
     text-align: center;
     background:rgb(20, 33, 61);
     color: rgb( 20, 33, 61)
     padding: 15px;
+    height: 100%;
+    
 }
 .question-card {
     background-color: whitesmoke;
