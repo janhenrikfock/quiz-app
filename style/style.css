@@ -5,24 +5,25 @@ body {
     font-size: 112.5%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:repeat (3,auto);
+    grid-template-rows: 2fr, auto, 1fr;
     margin: 0px;
     justify-items: center;
+    align-items: start;
 }
 header {
     grid-row: 1;
     width: 100%;
+    background-color: salmon;
 }
 h1 {
     text-align: center;
-    background: limegreen;
-    margin: 0px;
+    background:rgb(20, 33, 61);
+    color: rgb( 20, 33, 61)
     padding: 15px;
 }
 .question-card {
-    background-color: lightcoral;
+    background-color: whitesmoke;
     padding: 20px;
-    margin: 20px;
 }
 footer {
     grid-row: 3;
