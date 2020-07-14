@@ -7,21 +7,16 @@ https://docs.google.com/presentation/d/17EJ8pxeZgsvLHF9ElHCXGxzQgqffG_zuOQSBTBsj
 
 color-palette:
 Black:
-Hex: 000000
-RGB: 0, 0, 0
+#000000
 
-Darkblue:
+Oxford Blue:
+#081156
 
 Orange:
-Hex: FCA311
-RGB: 252, 163, 17
+#f79003
 
 Smoke-grey:
-Hex: E5E5E5
-RGB: 229, 229, 229
+#cecdcb
 
 White:
-Hex: FFFFFF
-RGB: 255, 255, 255
-
-geht nicht
+#ffffff
