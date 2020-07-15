@@ -1,17 +1,21 @@
 .quizcard {
   background-color: whitesmoke;
   padding: 20px;
-  margin-bottom: 40px;
+  margin: 40px;
+  position: relative;
 }
 .quizcard__headline {
   text-align: center;
 }
 .quizcard__bookmark {
   background-color: #fca311;
+  position: absolute;
   padding: 10px;
   min-height: 25px;
   min-width: 25px;
   border-radius: 15px;
+  top: -30px;
+  right: -30px;
 }
 .quizcard__button {
   background: lightslategray;
