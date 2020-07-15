@@ -1,0 +1,24 @@
+.footer {
+  grid-row: 3;
+  width: 100%;
+  background-color: #081156;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  min-height: 50px;
+}
+.footer__navigation {
+  display: flex;
+  justify-content: space-evenly;
+  max-height: 400px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+.footer__navigation__link {
+  color: white;
+  background-color: #fca311;
+  padding: 10px;
+}

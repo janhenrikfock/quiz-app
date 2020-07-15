@@ -1,0 +1,35 @@
+.quizcard {
+  background-color: whitesmoke;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+.quizcard__headline {
+  text-align: center;
+}
+.quizcard__bookmark {
+  background-color: #fca311;
+  padding: 10px;
+  min-height: 25px;
+  min-width: 25px;
+  border-radius: 15px;
+}
+.quizcard__button {
+  background: lightslategray;
+}
+.quizcard__para {
+  padding: 15px;
+  line-height: 25px;
+}
+.quizcard__answerlist {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.quizcard__answerlist__answer {
+  background-color: #fca311;
+  color: #ffffff;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 10px;
+}

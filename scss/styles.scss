@@ -1,74 +1,20 @@
 .body {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 2fr, auto, 1fr;
+  grid-template-rows: 2fr, auto, auto;
   margin: 0px;
   justify-items: center;
   align-items: start;
 }
-.header {
-  grid-row: 1;
-  width: 100%;
-  background-color: #14213d;
-}
-.header__title {
-  text-align: center;
-  padding: 15px;
-  height: 100%;
-  color: #ffffff;
-}
+
 .main {
   padding-right: 20px;
   padding-left: 20px;
-}
-.quizcard {
-  background-color: whitesmoke;
-  padding: 20px;
-  margin-bottom: 40px;
-}
-.quizcard__headline {
-  text-align: center;
-}
-.quizcard__bookmark {
-  background-color: #fca311;
-}
-.quizcard__button {
-  background: lightslategray;
-}
-.quizcard__para {
-  padding: 15px;
-  line-height: 25px;
-}
-.quizcard__answerlist {
-  display: flex;
-  list-style: none;
-  justify-content: space-evenly;
-  width: 100%;
-}
-.quizcard__answerlist__answer {
-  background-color: #fca311;
-  color: #ffffff;
-  padding: 8px;
-  margin: 4px;
-  border-radius: 10px;
-}
-.footer {
-  grid-row: 3;
-  width: 100%;
-  background-color: #081156;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-}
-.footer__navigation {
-  display: flex;
-  justify-content: space-evenly;
-  max-height: 60px;
-  width: 100%;
-}
-.footer__navigation__link {
-  color: white;
+  background-color: white;
 }
 
 @import './utility';
 @import './base.scss';
+@import './card';
+@import './footer';
+@import './header';
