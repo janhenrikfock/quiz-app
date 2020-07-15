@@ -9,14 +9,13 @@
 .header {
   grid-row: 1;
   width: 100%;
-  background-color: #081156;
+  background-color: #14213d;
 }
 .header__title {
   text-align: center;
-  color: 14213d;
   padding: 15px;
   height: 100%;
-  color: white;
+  color: #ffffff;
 }
 .main {
   padding-right: 20px;
@@ -29,6 +28,9 @@
 }
 .quizcard__headline {
   text-align: center;
+}
+.quizcard__bookmark {
+  background-color: #fca311;
 }
 .quizcard__button {
   background: lightslategray;
@@ -44,6 +46,11 @@
   width: 100%;
 }
 .quizcard__answerlist__answer {
+  background-color: #fca311;
+  color: #ffffff;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 10px;
 }
 .footer {
   grid-row: 3;
@@ -51,6 +58,7 @@
   background-color: #081156;
   position: fixed;
   bottom: 0px;
+  width: 100%;
 }
 .footer__navigation {
   display: flex;

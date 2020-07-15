@@ -9,14 +9,14 @@ color-palette:
 Black:
 #000000
 
-Oxford Blue:
-#081156
-
 Orange:
-#f79003
+#fca311
 
-Smoke-grey:
-#cecdcb
+Grey:
+#e5e5e5
 
 White:
 #ffffff
+
+Oxford-blue
+#14213d
