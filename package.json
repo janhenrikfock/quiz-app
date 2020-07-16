@@ -4,7 +4,7 @@
   "description": "a simple app with q and a for excercise",
   "main": "index.html",
   "scripts": {
-    "start": "npm run sass && npm-run-all --parallel sass:watch",
+    "start": "npm run sass && npm-run-all --parallel serve sass:watch",
     "serve": "serve .",
     "sass": "node-sass --output-style compressed scss/styles.scss styles.css",
     "sass:watch": "npm run sass -- -w"

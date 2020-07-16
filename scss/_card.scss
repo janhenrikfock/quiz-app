@@ -19,6 +19,9 @@
 }
 .quizcard__button {
   background: lightslategray;
+  min-height: 25px;
+  min-width: 50px;
+  border-radius: 15px;
 }
 .quizcard__para {
   padding: 15px;
