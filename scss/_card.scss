@@ -7,21 +7,14 @@
 .quizcard__headline {
   text-align: center;
 }
-.quizcard__bookmark {
-  background-color: #fca311;
-  position: absolute;
-  padding: 10px;
-  min-height: 25px;
-  min-width: 25px;
-  border-radius: 15px;
-  top: -30px;
-  right: -30px;
-}
 .quizcard__button {
-  background: lightslategray;
-  min-height: 25px;
-  min-width: 50px;
+  min-height: 50px;
+  min-width: 120px;
   border-radius: 15px;
+  font-size: 1.15em;
+  background: lightslategray;
+  margin-left: auto;
+  margin-right: auto;
 }
 .quizcard__para {
   padding: 15px;

@@ -1,7 +1,7 @@
 .body {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 2fr, auto, auto;
+  grid-template-rows: 1fr auto auto;
   margin: 0px;
   justify-items: center;
   align-items: start;
@@ -16,3 +16,4 @@
 @import './card';
 @import './footer';
 @import './header';
+@import './quizcard_bookmark';
