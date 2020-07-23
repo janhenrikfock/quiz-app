@@ -28,7 +28,32 @@ buttonCreate.addEventListener('click', function () {
 });
 buttonProfile.addEventListener('click', function () {
   nav(pageProfile);
-}); //Switch color on first bookmark button
+});
+
+if (pageHome.style.display == 'inline') {
+  buttonHome.style.backgroundColor = ' #c0392b ';
+} else {
+  buttonHome.style.backgroundColor = '#fca311';
+}
+
+if (pageBookmark.style.display == 'inline') {
+  buttonBookmark.style.backgroundColor = ' #c0392b ';
+} else {
+  buttonBookmark.style.backgroundColor = '#fca311';
+}
+
+if (pageCreate.style.display == 'inline') {
+  buttonCreate.style.backgroundColor = ' #c0392b ';
+} else {
+  buttonCreate.style.backgroundColor = '#fca311';
+}
+
+if (pageProfile.style.display == 'inline') {
+  buttonProfile.style.backgroundColor = ' #c0392b ';
+} else {
+  buttonProfile.style.backgroundColor = '#fca311';
+} //Switch color on first bookmark button
+
 
 var buttonBookmarkCard = document.querySelector('.quizcard__bookmark');
 buttonBookmarkCard.addEventListener('click', function () {
@@ -41,9 +66,13 @@ function nav(newPage) {
   pageCreate.classList.add('d - none');
   pageProfile.classList.add('d - none');
   newPage.classList.remove('d-none');
-} //Function get
+} //Functions
 
 
 function get(selector) {
   return document.querySelector(selector);
+}
+
+function getAll(selector) {
+  return document.querySelectorAll(selector);
 }
