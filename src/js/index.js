@@ -1,12 +1,13 @@
-const buttonHome = document.querySelector('.link-home')
-const buttonBookmark = document.querySelector('.link-bookmark')
-const buttonCreate = document.querySelector('.link-create')
-const buttonProfile = document.querySelector('.link-profile')
+//JS functions for navbar
+const buttonHome = get('.link-home')
+const buttonBookmark = get('.link-bookmark')
+const buttonCreate = get('.link-create')
+const buttonProfile = get('.link-profile')
 
-const pageHome = document.querySelector('.page-home')
-const pageBookmark = document.querySelector('.page-bookmarks')
-const pageCreate = document.querySelector('.page-create')
-const pageProfile = document.querySelector('.page-profile')
+const pageHome = get('.page-home')
+const pageBookmark = get('.page-bookmarks')
+const pageCreate = get('.page-create')
+const pageProfile = get('.page-profile')
 
 buttonHome.addEventListener('click', () => {
   pageHome.classList.remove(d - none)
@@ -14,6 +15,7 @@ buttonHome.addEventListener('click', () => {
   pageCreate.classList.add(d - none)
   pageProfile.classList.add(d - none)
 })
+
 buttonBookmark.addEventListener('click', () => {
   pageHome.classList.add(d - none)
   pageBookmark.classList.remove(d - none)
@@ -27,9 +29,21 @@ buttonCreate.addEventListener('click', () => {
   pageCreate.classList.remove(d - none)
   pageProfile.classList.add(d - none)
 })
+
 buttonProfile.addEventListener('click', () => {
   pageHome.classList.add(d - none)
   pageBookmark.classList.add(d - none)
   pageCreate.classList.add(d - none)
   pageProfile.classList.remove(d - none)
 })
+
+//Switch color on first bookmark button
+const buttonBookmarkCard = document.querySelector('.quizcard__bookmark')
+buttonBookmarkCard.addEventListener('click', () => {
+  buttonBookmarkCard.classList.toggle('active')
+})
+
+//Functions
+function get(selector) {
+  return document.querySelector(selector)
+}

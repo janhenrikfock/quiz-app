@@ -1,13 +1,14 @@
 "use strict";
 
-var buttonHome = document.querySelector('.link-home');
-var buttonBookmark = document.querySelector('.link-bookmark');
-var buttonCreate = document.querySelector('.link-create');
-var buttonProfile = document.querySelector('.link-profile');
-var pageHome = document.querySelector('.page-home');
-var pageBookmark = document.querySelector('.page-bookmarks');
-var pageCreate = document.querySelector('.page-create');
-var pageProfile = document.querySelector('.page-profile');
+//JS functions for navbar
+var buttonHome = get('.link-home');
+var buttonBookmark = get('.link-bookmark');
+var buttonCreate = get('.link-create');
+var buttonProfile = get('.link-profile');
+var pageHome = get('.page-home');
+var pageBookmark = get('.page-bookmarks');
+var pageCreate = get('.page-create');
+var pageProfile = get('.page-profile');
 buttonHome.addEventListener('click', function () {
   pageHome.classList.remove(d - none);
   pageBookmark.classList.add(d - none);
@@ -31,4 +32,13 @@ buttonProfile.addEventListener('click', function () {
   pageBookmark.classList.add(d - none);
   pageCreate.classList.add(d - none);
   pageProfile.classList.remove(d - none);
-});
+}); //Switch color on first bookmark button
+
+var buttonBookmarkCard = document.querySelector('.quizcard__bookmark');
+buttonBookmarkCard.addEventListener('click', function () {
+  buttonBookmarkCard.classList.toggle('active');
+}); //Functions
+
+function get(selector) {
+  return document.querySelector(selector);
+}
