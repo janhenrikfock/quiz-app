@@ -8,36 +8,34 @@ var buttonProfile = get('.link-profile');
 var pageHome = get('.page-home');
 var pageBookmark = get('.page-bookmarks');
 var pageCreate = get('.page-create');
-var pageProfile = get('.page-profile');
+var pageProfile = get('.page-profile'); //Navigate the pages
+
 buttonHome.addEventListener('click', function () {
-  pageHome.classList.remove(d - none);
-  pageBookmark.classList.add(d - none);
-  pageCreate.classList.add(d - none);
-  pageProfile.classList.add(d - none);
+  nav(pageHome);
 });
 buttonBookmark.addEventListener('click', function () {
-  pageHome.classList.add(d - none);
-  pageBookmark.classList.remove(d - none);
-  pageCreate.classList.add(d - none);
-  pageProfile.classList.add(d - none);
+  nav(pageBookmark);
 });
 buttonCreate.addEventListener('click', function () {
-  pageHome.classList.add(d - none);
-  pageBookmark.classList.add(d - none);
-  pageCreate.classList.remove(d - none);
-  pageProfile.classList.add(d - none);
+  nav(pageCreate);
 });
 buttonProfile.addEventListener('click', function () {
-  pageHome.classList.add(d - none);
-  pageBookmark.classList.add(d - none);
-  pageCreate.classList.add(d - none);
-  pageProfile.classList.remove(d - none);
+  nav(pageProfile);
 }); //Switch color on first bookmark button
 
 var buttonBookmarkCard = document.querySelector('.quizcard__bookmark');
 buttonBookmarkCard.addEventListener('click', function () {
   buttonBookmarkCard.classList.toggle('active');
-}); //Functions
+}); //Function Navigate the pages
+
+function nav(newPage) {
+  pageHome.classList.add('d-none');
+  pageBookmark.classList.add('d-none');
+  pageCreate.classList.add('d - none');
+  pageProfile.classList.add('d - none');
+  newPage.classList.remove('d-none');
+} //Function get
+
 
 function get(selector) {
   return document.querySelector(selector);

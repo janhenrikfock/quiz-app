@@ -9,32 +9,18 @@ const pageBookmark = get('.page-bookmarks')
 const pageCreate = get('.page-create')
 const pageProfile = get('.page-profile')
 
+//Navigate the pages
 buttonHome.addEventListener('click', () => {
-  pageHome.classList.remove(d - none)
-  pageBookmark.classList.add(d - none)
-  pageCreate.classList.add(d - none)
-  pageProfile.classList.add(d - none)
+  nav(pageHome)
 })
-
 buttonBookmark.addEventListener('click', () => {
-  pageHome.classList.add(d - none)
-  pageBookmark.classList.remove(d - none)
-  pageCreate.classList.add(d - none)
-  pageProfile.classList.add(d - none)
+  nav(pageBookmark)
 })
-
 buttonCreate.addEventListener('click', () => {
-  pageHome.classList.add(d - none)
-  pageBookmark.classList.add(d - none)
-  pageCreate.classList.remove(d - none)
-  pageProfile.classList.add(d - none)
+  nav(pageCreate)
 })
-
 buttonProfile.addEventListener('click', () => {
-  pageHome.classList.add(d - none)
-  pageBookmark.classList.add(d - none)
-  pageCreate.classList.add(d - none)
-  pageProfile.classList.remove(d - none)
+  nav(pageProfile)
 })
 
 //Switch color on first bookmark button
@@ -42,8 +28,15 @@ const buttonBookmarkCard = document.querySelector('.quizcard__bookmark')
 buttonBookmarkCard.addEventListener('click', () => {
   buttonBookmarkCard.classList.toggle('active')
 })
-
-//Functions
+//Function Navigate the pages
+function nav(newPage) {
+  pageHome.classList.add('d-none')
+  pageBookmark.classList.add('d-none')
+  pageCreate.classList.add('d - none')
+  pageProfile.classList.add('d - none')
+  newPage.classList.remove('d-none')
+}
+//Function get
 function get(selector) {
   return document.querySelector(selector)
 }
