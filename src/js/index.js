@@ -65,7 +65,7 @@ function nav(newPage) {
   pageProfile.classList.add('d-none')
   newPage.classList.remove('d-none')
 }
-//Functions
+//Utility-functions
 function get(selector) {
   return document.querySelector(selector)
 }

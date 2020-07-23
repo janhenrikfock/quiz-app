@@ -184,7 +184,7 @@ function nav(newPage) {
   pageCreate.classList.add('d-none');
   pageProfile.classList.add('d-none');
   newPage.classList.remove('d-none');
-} //Functions
+} //Utility-functions
 
 
 function get(selector) {
