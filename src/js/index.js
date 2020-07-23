@@ -1,4 +1,8 @@
-//JS functions for navbar
+//JS variables for show-answer button
+const buttonShowAnswer = get('.quizcard__button')
+const paraAnswer = get('.quizcard__paragraph--answer')
+
+//JS variables for navbar
 const buttonHome = get('.link-home')
 const buttonBookmark = get('.link-bookmark')
 const buttonCreate = get('.link-create')
@@ -8,6 +12,11 @@ const pageHome = get('.page-home')
 const pageBookmark = get('.page-bookmarks')
 const pageCreate = get('.page-create')
 const pageProfile = get('.page-profile')
+
+//Show the Answer on the Page
+buttonShowAnswer.addEventListener('click', () => {
+  paraAnswer.classList.toggle('d-none')
+})
 
 //Navigate the pages
 buttonHome.addEventListener('click', () => {

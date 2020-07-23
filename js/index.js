@@ -1,6 +1,9 @@
 "use strict";
 
-//JS functions for navbar
+//JS variables for show-answer button
+var buttonShowAnswer = get('.quizcard__button');
+var paraAnswer = get('.quizcard__paragraph--answer'); //JS variables for navbar
+
 var buttonHome = get('.link-home');
 var buttonBookmark = get('.link-bookmark');
 var buttonCreate = get('.link-create');
@@ -8,7 +11,11 @@ var buttonProfile = get('.link-profile');
 var pageHome = get('.page-home');
 var pageBookmark = get('.page-bookmarks');
 var pageCreate = get('.page-create');
-var pageProfile = get('.page-profile'); //Navigate the pages
+var pageProfile = get('.page-profile'); //Show the Answer on the Page
+
+buttonShowAnswer.addEventListener('click', function () {
+  paraAnswer.classList.toggle('d-none');
+}); //Navigate the pages
 
 buttonHome.addEventListener('click', function () {
   nav(pageHome);
