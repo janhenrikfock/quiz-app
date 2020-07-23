@@ -18,19 +18,6 @@ buttonShowAnswer.addEventListener('click', () => {
   paraAnswer.classList.toggle('d-none')
 })
 
-//Navigate the pages
-buttonHome.addEventListener('click', () => {
-  nav(pageHome)
-})
-buttonBookmark.addEventListener('click', () => {
-  nav(pageBookmark)
-})
-buttonCreate.addEventListener('click', () => {
-  nav(pageCreate)
-})
-buttonProfile.addEventListener('click', () => {
-  nav(pageProfile)
-})
 if (pageHome.style.display == 'inline') {
   buttonHome.style.backgroundColor = ' #c0392b '
 } else {
@@ -52,6 +39,19 @@ if (pageProfile.style.display == 'inline') {
   buttonProfile.style.backgroundColor = '#fca311'
 }
 
+//Navigate the pages
+buttonHome.addEventListener('click', () => {
+  nav(pageHome)
+})
+buttonBookmark.addEventListener('click', () => {
+  nav(pageBookmark)
+})
+buttonCreate.addEventListener('click', () => {
+  nav(pageCreate)
+})
+buttonProfile.addEventListener('click', () => {
+  nav(pageProfile)
+})
 //Switch color on first bookmark button
 const buttonBookmarkCard = document.querySelector('.quizcard__bookmark')
 buttonBookmarkCard.addEventListener('click', () => {
@@ -61,8 +61,8 @@ buttonBookmarkCard.addEventListener('click', () => {
 function nav(newPage) {
   pageHome.classList.add('d-none')
   pageBookmark.classList.add('d-none')
-  pageCreate.classList.add('d - none')
-  pageProfile.classList.add('d - none')
+  pageCreate.classList.add('d-none')
+  pageProfile.classList.add('d-none')
   newPage.classList.remove('d-none')
 }
 //Functions
