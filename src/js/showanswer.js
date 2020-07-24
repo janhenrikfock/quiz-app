@@ -1,10 +1,17 @@
-console.log('showanswer.js')
+import { getAll } from './util'
 
-//JS variables for show-answer button
-const buttonShowAnswer = get('.quizcard__button')
-const paraAnswer = get('.quizcard__paragraph--answer')
+export function initializeShowanswer() {
+  const cardList = getAll('.quizcard')
+  cardList.forEach(showHideAnswerLogic)
 
-//Show the Answer on the Page
-buttonShowAnswer.addEventListener('click', () => {
-  paraAnswer.classList.toggle('d-none')
-})
+  function showHideAnswerLogic(quizCard) {
+    const buttonAnswer = quizCard.querySelector('.quizcard__button')
+    const paraAnswer = quizCard.querySelector('.quizcard__paragraph--answer')
+
+    console.log(123)
+
+    buttonAnswer.addEventListener('click', () => {
+      paraAnswer.classList.toggle('d-none')
+    })
+  }
+}

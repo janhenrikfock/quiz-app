@@ -1,6 +1,9 @@
-console.log('index.js')
+console.log('its me: index.js')
 
-import { initializeNavigation } from './navigation'
 import { initializeBookmark } from './bookmark'
-initializeNavigation()
+import { initializeNavigation } from './navigation'
+import { initializeShowanswer } from './showanswer'
+
 initializeBookmark()
+initializeNavigation()
+initializeShowanswer()
