@@ -8,8 +8,6 @@ export function initializeShowanswer() {
     const buttonAnswer = quizCard.querySelector('.quizcard__button')
     const paraAnswer = quizCard.querySelector('.quizcard__paragraph--answer')
 
-    console.log(123)
-
     buttonAnswer.addEventListener('click', () => {
       paraAnswer.classList.toggle('d-none')
     })

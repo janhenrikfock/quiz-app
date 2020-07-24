@@ -146,7 +146,6 @@ var _util = require("./util");
 function initializeBookmark() {
   var cardList = (0, _util.getAll)('.quizcard');
   cardList.forEach(bookmarkQuestion);
-  console.log(123);
 
   function bookmarkQuestion(quizCard) {
     var bookmarkButton = quizCard.querySelector('.quizcard__bookmark');
@@ -212,7 +211,6 @@ function initializeShowanswer() {
   function showHideAnswerLogic(quizCard) {
     var buttonAnswer = quizCard.querySelector('.quizcard__button');
     var paraAnswer = quizCard.querySelector('.quizcard__paragraph--answer');
-    console.log(123);
     buttonAnswer.addEventListener('click', function () {
       paraAnswer.classList.toggle('d-none');
     });
