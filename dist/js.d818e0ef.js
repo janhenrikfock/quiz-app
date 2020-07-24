@@ -117,75 +117,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/js/index.js":[function(require,module,exports) {
-//JS variables for show-answer button
-var buttonShowAnswer = get('.quizcard__button');
-var paraAnswer = get('.quizcard__paragraph--answer'); //JS variables for navbar
+})({"src/js/util.js":[function(require,module,exports) {
+"use strict";
 
-var buttonHome = get('.link-home');
-var buttonBookmark = get('.link-bookmark');
-var buttonCreate = get('.link-create');
-var buttonProfile = get('.link-profile');
-var pageHome = get('.page-home');
-var pageBookmark = get('.page-bookmarks');
-var pageCreate = get('.page-create');
-var pageProfile = get('.page-profile'); //Show the Answer on the Page
-
-buttonShowAnswer.addEventListener('click', function () {
-  paraAnswer.classList.toggle('d-none');
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
-
-if (pageHome.style.display == 'inline') {
-  buttonHome.style.backgroundColor = ' #c0392b ';
-} else {
-  buttonHome.style.backgroundColor = '#fca311';
-}
-
-if (pageBookmark.style.display == 'inline') {
-  buttonBookmark.style.backgroundColor = ' #c0392b ';
-} else {
-  buttonBookmark.style.backgroundColor = '#fca311';
-}
-
-if (pageCreate.style.display == 'inline') {
-  buttonCreate.style.backgroundColor = ' #c0392b ';
-} else {
-  buttonCreate.style.backgroundColor = '#fca311';
-}
-
-if (pageProfile.style.display == 'inline') {
-  buttonProfile.style.backgroundColor = ' #c0392b ';
-} else {
-  buttonProfile.style.backgroundColor = '#fca311';
-} //Navigate the pages
-
-
-buttonHome.addEventListener('click', function () {
-  nav(pageHome);
-});
-buttonBookmark.addEventListener('click', function () {
-  nav(pageBookmark);
-});
-buttonCreate.addEventListener('click', function () {
-  nav(pageCreate);
-});
-buttonProfile.addEventListener('click', function () {
-  nav(pageProfile);
-}); //Switch color on first bookmark button
-
-var buttonBookmarkCard = document.querySelector('.quizcard__bookmark');
-buttonBookmarkCard.addEventListener('click', function () {
-  buttonBookmarkCard.classList.toggle('active');
-}); //Function Navigate the pages
-
-function nav(newPage) {
-  pageHome.classList.add('d-none');
-  pageBookmark.classList.add('d-none');
-  pageCreate.classList.add('d-none');
-  pageProfile.classList.add('d-none');
-  newPage.classList.remove('d-none');
-} //Utility-functions
-
+exports.get = get;
+exports.getAll = getAll;
 
 function get(selector) {
   return document.querySelector(selector);
@@ -194,7 +133,79 @@ function get(selector) {
 function getAll(selector) {
   return document.querySelectorAll(selector);
 }
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"src/js/navigation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initializeNavigation = initializeNavigation;
+
+var _util = require("./util");
+
+function initializeNavigation() {
+  var buttonHome = (0, _util.get)('.link-home');
+  var buttonBookmark = (0, _util.get)('.link-bookmark');
+  var buttonCreate = (0, _util.get)('.link-create');
+  var buttonProfile = (0, _util.get)('.link-profile');
+  var pageHome = (0, _util.get)('.page-home');
+  var pageBookmark = (0, _util.get)('.page-bookmarks');
+  var pageCreate = (0, _util.get)('.page-create');
+  var pageProfile = (0, _util.get)('.page-profile');
+  buttonHome.addEventListener('click', function () {
+    nav(pageHome);
+  });
+  buttonBookmark.addEventListener('click', function () {
+    nav(pageBookmark);
+  });
+  buttonCreate.addEventListener('click', function () {
+    nav(pageCreate);
+  });
+  buttonProfile.addEventListener('click', function () {
+    nav(pageProfile);
+  });
+
+  function nav(newPage) {
+    pageHome.classList.add('d-none');
+    pageBookmark.classList.add('d-none');
+    pageCreate.classList.add('d-none');
+    pageProfile.classList.add('d-none');
+    newPage.classList.remove('d-none');
+  }
+}
+},{"./util":"src/js/util.js"}],"src/js/bookmark.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initializeBookmark = initializeBookmark;
+
+var _util = require("./util");
+
+function initializeBookmark() {
+  var cardList = (0, _util.getAll)('.quizcard');
+  cardList.forEach(bookmarkQuestion);
+  console.log(123);
+
+  function bookmarkQuestion(quizCard) {
+    var bookmarkButton = quizCard.querySelector('.quizcard__bookmark');
+    bookmarkButton.addEventListener('click', function () {
+      bookmarkButton.classList.toggle('active');
+    });
+  }
+}
+},{"./util":"src/js/util.js"}],"src/js/index.js":[function(require,module,exports) {
+"use strict";
+
+var _navigation = require("./navigation");
+
+var _bookmark = require("./bookmark");
+
+console.log('index.js');
+(0, _navigation.initializeNavigation)();
+(0, _bookmark.initializeBookmark)();
+},{"./navigation":"src/js/navigation.js","./bookmark":"src/js/bookmark.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -222,7 +233,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52051" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55780" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
