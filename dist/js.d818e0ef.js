@@ -133,7 +133,46 @@ function get(selector) {
 function getAll(selector) {
   return document.querySelectorAll(selector);
 }
-},{}],"src/js/bookmark.js":[function(require,module,exports) {
+},{}],"src/js/createCards.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initCard = initCard;
+exports.createQuestionCard = createQuestionCard;
+
+var _util = require("./util");
+
+var cardArray = [{
+  question: 'Dies ist unsere Frage Nummer 1',
+  answer: 'Dies ist unsere schlaue Antwort'
+}, {
+  question: 'Dies ist unsere Frage Nummer 2',
+  answer: 'Dies ist unsere schlaue Antwort'
+}, {
+  question: 'Dies ist unsere Frage Nummer 3',
+  answer: 'Dies ist unsere schlaue Antwort'
+}];
+
+function initCard() {
+  cardArray.forEach(createQuestionCard);
+}
+
+function createQuestionCard() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      _ref$question = _ref.question,
+      question = _ref$question === void 0 ? 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr' : _ref$question,
+      _ref$answer = _ref.answer,
+      answer = _ref$answer === void 0 ? 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr' : _ref$answer;
+
+  var newCard = document.createElement('section');
+  var target = (0, _util.get)('.page-home');
+  newCard.className = 'quizcard';
+  target.appendChild(newCard);
+  newCard.innerHTML = "<h2 class=\"quizcard__headline serif\">Question</h2>\n<button class=\"quizcard__bookmark\">\n  <img src=\"/images/bookmark.png\" alt=\"\" />\n</button>\n<p class=\"quizcard__para quizcard__paragraph--question\">\n".concat(question, "\n</p>\n<button class=\"quizcard__button\" onclick=\"\">Show Answer</button>\n<p class=\"quizcard__para quizcard__paragraph--answer\">\n").concat(answer, "\n</p>\n<ul class=\"quizcard__answerlist\">\n  <li class=\"quizcard__answerlist__answer\">A</li>\n  <li class=\"quizcard__answerlist__answer\">B</li>\n  <li class=\"quizcard__answerlist__answer\">C</li>\n  <li class=\"quizcard__answerlist__answer\">D</li>\n</ul>");
+}
+},{"./util":"src/js/util.js"}],"src/js/bookmark.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -219,6 +258,8 @@ function initializeShowanswer() {
 },{"./util":"src/js/util.js"}],"src/js/index.js":[function(require,module,exports) {
 "use strict";
 
+var _createCards = require("./createCards");
+
 var _bookmark = require("./bookmark");
 
 var _navigation = require("./navigation");
@@ -226,10 +267,11 @@ var _navigation = require("./navigation");
 var _showanswer = require("./showanswer");
 
 console.log('its me: index.js');
+(0, _createCards.initCard)();
 (0, _bookmark.initializeBookmark)();
 (0, _navigation.initializeNavigation)();
 (0, _showanswer.initializeShowanswer)();
-},{"./bookmark":"src/js/bookmark.js","./navigation":"src/js/navigation.js","./showanswer":"src/js/showanswer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./createCards":"src/js/createCards.js","./bookmark":"src/js/bookmark.js","./navigation":"src/js/navigation.js","./showanswer":"src/js/showanswer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -257,7 +299,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55780" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62132" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
