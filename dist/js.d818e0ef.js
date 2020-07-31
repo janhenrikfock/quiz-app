@@ -146,13 +146,16 @@ var _util = require("./util");
 
 var cardArray = [{
   question: 'Dies ist unsere Frage Nummer 1',
-  answer: 'Dies ist unsere schlaue Antwort'
+  answer: 'Dies ist unsere schlaue Antwort',
+  tags: ['HTML', 'CSS', 'JS', 'None']
 }, {
   question: 'Dies ist unsere Frage Nummer 2',
-  answer: 'Dies ist unsere schlaue Antwort'
+  answer: 'Dies ist unsere schlaue Antwort',
+  tags: ['HTML', 'CSS', 'JS', 'None']
 }, {
   question: 'Dies ist unsere Frage Nummer 3',
-  answer: 'Dies ist unsere schlaue Antwort'
+  answer: 'Dies ist unsere schlaue Antwort',
+  tags: ['HTML', 'CSS', 'JS', 'None']
 }];
 
 function initCard() {
@@ -299,7 +302,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62132" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59094" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

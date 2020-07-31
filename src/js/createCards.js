@@ -4,14 +4,17 @@ const cardArray = [
   {
     question: 'Dies ist unsere Frage Nummer 1',
     answer: 'Dies ist unsere schlaue Antwort',
+    tags: ['HTML', 'CSS', 'JS', 'None'],
   },
   {
     question: 'Dies ist unsere Frage Nummer 2',
     answer: 'Dies ist unsere schlaue Antwort',
+    tags: ['HTML', 'CSS', 'JS', 'None'],
   },
   {
     question: 'Dies ist unsere Frage Nummer 3',
     answer: 'Dies ist unsere schlaue Antwort',
+    tags: ['HTML', 'CSS', 'JS', 'None'],
   },
 ]
 
